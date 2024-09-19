@@ -5,8 +5,11 @@ A Variational Autoencoder was used to detect anomalies in breast mammographies. 
 # Libraries
 
 Torch 2.4.1
+
 Pandas 2.1.3
+
 Numpy 1.26.2
+
 Matplotlib 3.8.3
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
