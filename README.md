@@ -56,3 +56,9 @@ The results from the images with findings are as follows
 
 ![image](https://github.com/user-attachments/assets/4a3e98fb-3ebd-4326-b6b3-08159edb6b73)
 
+---------------------------------------------------------------------------------------------------------------------------------------------
+# Conclusion
+
+Despite the model not achieving a low loss and the generated images lacking high quality, it has still learned some useful features. This is evident from the fact that the loss for healthy images is considerably lower compared to the loss for images with findings. 
+
+Probably with more training images (only 1,000 were used for this project) and more **epochs**, it is likely that the model could produce higher-definition images and further reduce the reconstruction loss.
