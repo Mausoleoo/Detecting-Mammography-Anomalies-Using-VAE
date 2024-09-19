@@ -51,3 +51,8 @@ To analyze the model's performance, 20 healthy images from the test set of the V
 The results from the healthy images are as follows
 
 ![image](https://github.com/user-attachments/assets/e9218e20-09da-4fbc-9930-573cb48222c8)
+
+The results from the images with findings are as follows
+
+![image](https://github.com/user-attachments/assets/4a3e98fb-3ebd-4326-b6b3-08159edb6b73)
+
