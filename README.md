@@ -12,6 +12,7 @@ Numpy 1.26.2
 
 Matplotlib 3.8.3
 
+
 ---------------------------------------------------------------------------------------------------------------------------------------------
 # Dataset
 
@@ -20,6 +21,12 @@ The VinDr-Mammo dataset was used, containing images from 5,000 patients, with 4 
 The dataset was previously preprocessed by SSMan and downloaded from
 
 https://www.kaggle.com/datasets/ssmann/vindr-mammo-dataset
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+# Model
+
+The VAE model is stored in the VAE.py file and utilizes convolutional layers. The encoder consists of 4 convolutional layers, employing ReLU activation and max pooling. Fully connected layers are used for the latent space representation. The decoder is made up of 4 deconvolution layers, producing an output that matches the input size. The VAEConv function takes the input size, number of channels, and initial channels, which allows for larger feature maps in the convolutional layers.
+
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 # Training
