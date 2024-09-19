@@ -32,3 +32,8 @@ The VAE model is stored in the VAE.py file and utilizes convolutional layers. Th
 # Training
 
 Due to computational limitations, a sample of 1,000 images was used for training, consisting exclusively of images with no findings (healthy). The model was trained for 450 epochs, with all images resized to 128x128 to ensure consistency and optimize processing efficiency.
+
+The model showed a consistent decrease in loss throughout training, and it appeared that the loss would continue to improve with further training. However, I was unable to continue due to time constraints and the cost associated with using Google Colab Pro for extended training sessions.
+
+![image](https://github.com/user-attachments/assets/672a3d2a-5609-45d8-9f4b-bd287a1e1c0e)
+
