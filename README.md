@@ -1,5 +1,5 @@
 # Description
-A Variational Autoencoder was used to detect anomalies in breast mammographies. Trained on healthy breast images, with ELBO as the loss function and a latent space of 1024, the model identifies anomalies when the reconstruction error exceeds the average. It also generates realistic images of healthy breasts.
+A Variational Autoencoder (VAE) was implemented from scratch to generate breast mammography images. The model was trained on 1,000 healthy breast images, specifically focusing on mediolateral oblique (MLO) views of the right breast. The architecture employs convolutional layers in the encoder and deconvolutional layers in the decoder to process and reconstruct images. The training utilized the Evidence Lower Bound (ELBO) as the loss function, with a latent space of dimension 1024 to encode the key features of the input data. This approach effectively captures the underlying patterns in the dataset, enabling the **generation of realistic mammography images**.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 # Libraries
@@ -23,9 +23,22 @@ The dataset was previously preprocessed by SSMan and downloaded from
 https://www.kaggle.com/datasets/ssmann/vindr-mammo-dataset
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
-# Model
+# Architecture
 
-The VAE model is stored in the VAE.py file and utilizes convolutional layers. The encoder consists of 4 convolutional layers, employing ReLU activation and max pooling. Fully connected layers are used for the latent space representation. The decoder is made up of 4 deconvolution layers, producing an output that matches the input size. The VAEConv function takes the input size, number of channels, and initial channels, which allows for larger feature maps in the convolutional layers.
+The Variational Autoencoder (VAE) consists of an encoder, a latent space, and a decoder
+
+### Encoder 
+
+The encoder compresses 128×128x1 images into a lower-dimensional latent representation. It uses four convolutional layers with ReLU activations, progressively increasing the number of filters (32, 64, 128, 256) while reducing spatial dimensions via max-pooling, resulting in a flattened vector. Two fully connected layers produce the mean and log-variance for the latent space.
+
+### Latent Space
+
+The latent vector 𝑧 is sampled from the learned Normal distribution using the reparameterization trick.
+
+### Decoder
+
+The decoder reconstructs images from 𝑧 using four transposed convolutional layers with ReLU activations, progressively decreasing the number of filters (256, 128, 64, 32) while upsampling spatial dimensions. The final layer applies a sigmoid activation to output a 128×128×1 normalized image.
+
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
