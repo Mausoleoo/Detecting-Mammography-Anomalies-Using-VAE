@@ -2,6 +2,12 @@
 A Variational Autoencoder (VAE) was implemented from scratch to generate breast mammography images. The model was trained on 1,000 healthy breast images, specifically focusing on mediolateral oblique (MLO) views of the right breast. The architecture employs convolutional layers in the encoder and deconvolutional layers in the decoder to process and reconstruct images. The training utilized the Evidence Lower Bound (ELBO) as the loss function, with a latent space of dimension 1024 to encode the key features of the input data. This approach effectively captures the underlying patterns in the dataset, enabling the **generation of realistic mammography images**.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
+# Objective
+
+To develop a model for generating synthetic mammography images that can be used for data augmentation, addressing the challenge of limited data availability. By leveraging the relevant information learned from real data, the generated images provide valuable additional samples for training, improving model performance and robustness in medical imaging tasks.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
 # Libraries
 
 Torch 2.4.1
